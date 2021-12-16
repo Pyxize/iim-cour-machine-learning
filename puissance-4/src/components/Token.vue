@@ -1,12 +1,15 @@
 <template>
-  <div class="token rounded-full bg-red-600">
-    <slot></slot>
-  </div>
+  <button :class="`token rounded-full ${className}`">{{tokenIndex}}</button>
 </template>
 
 <script>
 export default {
-
+  props: {
+    tokenIndex: Number,
+    className: {
+      type: String,
+    }
+  }
 }
 </script>
 
